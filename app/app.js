@@ -1,4 +1,4 @@
-
+var io = require('socket.io-client');
 var socket = io.connect('http://localhost:3000');
 
 socket.on('connect', function () {
@@ -6,7 +6,7 @@ socket.on('connect', function () {
   socket.emit('forward', {
     action : 'message',
     data : {
-      string : 'thing'
+      string : 'thing',
       number : 10
     }
   });

@@ -8,5 +8,9 @@
     "start": "node server.js"
   },
   "author": "Jim Buck",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.12.2",
+    "socket.io": "^1.3.5"
+  }
 }
