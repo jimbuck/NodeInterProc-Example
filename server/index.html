@@ -1,0 +1,24 @@
+<html>
+  <head>
+  </head>
+  <body>
+    <h1>Client</h1>
+    <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+    <script>
+    var socket = io();
+
+    io.on('connection', function (socket) {
+      console.log('user connected to server');
+
+      socket.on('action', function (command) {
+        console.log(command.action, ':', command.data);
+      });
+
+      socket.on('disconnect', function () {
+        console.log('user disconnected');
+      });
+    });
+    </script>
+  </body>
+</html>
