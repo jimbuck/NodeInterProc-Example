@@ -12,5 +12,5 @@ Instructions to test:
  2. Open `http://localhost:3000` in a browser.
  3. Open the developer console in the browser.
  4. Open a new terminal instance.
- 5. Run `node ./app/app.js`
+ 5. Run `node ./app/app.js <action> [args ...]` (for example, `node ./app/app.js scream "Hello World!"`)
  6. Check the browser console for the message from the app.
