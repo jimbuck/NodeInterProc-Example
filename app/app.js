@@ -3,7 +3,7 @@ var socket = io.connect('http://localhost:3000');
 
 socket.on('connect', function () {
   // socket connected
-  socket.emit('forward', {
+  socket.emit('command', {
     action : 'message',
     data : {
       string : 'thing',
@@ -11,5 +11,5 @@ socket.on('connect', function () {
     }
   });
   
-  socket.close();
+  socket.disconnect();
 });
